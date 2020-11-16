@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <section>
+    <h1>Прыгающие шарики</h1>
+    <p class="text">1 вариант</p>
+<article class="principle sevena">
+    <div class="shape-container">
+      <div class="shape a"></div>
+      <div class="box"></div>
+    </div>
+    <div class="text">
+    </div>
+  </article>
+  <style media="screen">
+
+.sevena .shape-container {
+animation: move-right 5s infinite cubic-bezier(.37,.55,.49,.67);
+position: absolute;
+left: calc(50% - 4em);
+top: calc(50% - 4em);
+}
+.sevena .shape {
+animation: bounce 5s infinite linear;
+border-radius: 50%;
+position: relative;
+left: auto;
+top: auto;
+}
+@keyframes move-right {
+0% {
+  transform: translateX(-10em);
+  opacity: 1;
+}
+80% {
+  opacity: 1;
+}
+100% {
+  transform: translateX(10em);
+  opacity: 0;
+}
+}
+
+@keyframes bounce {
+  /* анимация 1 */
+0% {
+ transform: translateY(-8em);
+ animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+10%  {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+20%  {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+30% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+40% {
+  transform: translateY(-6em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+50% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+60% {
+  transform: translateY(-4em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+70% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+80% {
+  transform: translateY(0em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+85% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+90%, 100% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+}
+/* General styling */
+body {
+margin: 0;
+background: #e9b59f;
+font-family: HelveticaNeue, Arial, Sans-serif;
+color: #fff;
+}
+
+h1 {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+font-weight: 300;
+}
+h1+h1 {
+  left: 100 px;
+  top: 1000px;
+}
+
+h2 {
+font-size: 0.75em;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+a {
+text-decoration: none;
+color: #333;
+}
+
+.principle {
+width: 100%;
+height: 100vh;
+position: relative;
+}
+.text {
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 200px;
+    }
+.shape {
+background: #2d97db;
+border: 1em solid #fff;
+width: 2em;
+height: 2em;
+position: absolute;
+top: calc(50% - 2em);
+left: calc(50% - 2em);
+}
+  </style>
+
+    </section>
+    <section>
+
+        <p class="text">2 вариант</p>
+  <article class="principle sevenas">
+      <div class="shape-containers">
+        <div class="shapes"></div>
+        <div class="boxs"></div>
+      </div>
+      <div class="text">
+      </div>
+    </article>
+    <style media="screen">
+
+  .sevenas .shape-containers {
+  animation: move-right 5s infinite cubic-bezier(.37,.55,.49,.67);
+  position: absolute;
+  left: calc(50% - 4em);
+  top: calc(50% - 4em);
+  animation-direction: reverse;
+  }
+  .sevenas .shapes {
+  animation: bounce 5s infinite linear;
+  border-radius: 50%;
+  position: relative;
+  left: auto;
+  top: auto;
+  }
+  @keyframes move-right {
+  0% {
+    transform: translateX(-10em);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(10em);
+    opacity: 0;
+  }
+  }
+
+  @keyframes kous {
+
+    /* анимация 2 */
+  0% {
+   transform: translateY(-8em);
+   animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  10%  {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  20%  {
+    transform: translateY(-8em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  30% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  40% {
+    transform: translateY(-6em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  50% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  60% {
+    transform: translateY(-4em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  70% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  80% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  85% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  90%, 100% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  }
+
+  /* General styling */
+  body {
+  margin: 0;
+  background: #e9b59f;
+  font-family: HelveticaNeue, Arial, Sans-serif;
+  color: #fff;
+  }
+
+  h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 300;
+  }
+
+  h2 {
+  font-size: 0.75em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  }
+
+  a {
+  text-decoration: none;
+  color: #333;
+  }
+
+  .principles {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  }
+  .text {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 200px;
+      }
+  .shapes {
+  background: green;
+  border: 1em solid #fff;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: calc(50% - 2em);
+  left: calc(50% - 2em);
+  }
+
+    </style>
+
+    </section>
+
+    <section>
+
+      <p class="text">3 вариант</p>
+<article class="principle sevena5">
+    <div class="shape-container5">
+      <div class="shape5"></div>
+      <div class="boxb"></div>
+    </div>
+    <div class="text">
+    </div>
+  </article>
+  <style media="screen">
+
+.sevena5 .shape-container5 {
+animation: move-right 3.5s infinite cubic-bezier(.37,.55,.49,.67);
+position: absolute;
+left: calc(50% - 4em);
+top: calc(10% - 4em);
+}
+.sevena5 .shape5 {
+animation: kous3 3.5s infinite linear;
+border-radius: 50%;
+position: relative;
+left: auto;
+top: auto;
+}
+@keyframes move-right {
+0% {
+  transform: translateX(-10em);
+  opacity: 1;
+}
+97% {
+  opacity: 1;
+}
+100% {
+  transform: translateX(10em);
+  opacity: 0;
+}
+}
+
+@keyframes kous3 {
+  /* анимация 3 */
+0% {
+ transform: translateY(-8em);
+ animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+10%  {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+20%  {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+30% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+40% {
+  transform: translateY(-6em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+50% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+60% {
+  transform: translateY(-4em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+70% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+80% {
+  transform: translateY(0em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+85% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+90% {
+  transform: translateY(4em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+95% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+97% {
+  transform: translateY(7em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+ 100% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+}
+/* General styling */
+body {
+margin: 0;
+background: #e9b59f;
+font-family: HelveticaNeue, Arial, Sans-serif;
+color: #fff;
+}
+
+h1 {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+font-weight: 300;
+}
+
+h2 {
+font-size: 0.75em;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+a {
+text-decoration: none;
+color: #333;
+}
+
+.principle5 {
+width: 100%;
+height: 100vh;
+position: relative;
+}
+.text {
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 200px;
+    }
+.shape5  {
+background: grey;
+border: 1em solid #fff;
+width: 2em;
+height: 2em;
+position: absolute;
+top: calc(50% - 2em);
+left: calc(50% - 2em);
+}
+  </style>
+
+    </section>
+    <section>
+
+      <p class="text">4вариант</p>
+<article class="principle sevena3">
+    <div class="shape-container3">
+      <div class="shape3"></div>
+      <div class="boxb"></div>
+    </div>
+    <div class="text">
+    </div>
+  </article>
+  <style media="screen">
+
+.sevena3 .shape-container3 {
+animation: move-right 4s infinite cubic-bezier(.37,.55,.49,.67);
+position: absolute;
+left: calc(50% - 4em);
+top: calc(10% - 4em);
+}
+.sevena3 .shape3 {
+animation: kous4 4s infinite linear;
+border-radius: 50%;
+position: relative;
+left: auto;
+top: auto;
+}
+@keyframes move-right {
+0% {
+  transform: translateX(-10em);
+  opacity: 1;
+}
+97% {
+  opacity: 1;
+}
+100% {
+  transform: translateX(10em);
+  opacity: 0;
+}
+}
+
+@keyframes kous4 {
+  /* анимация 4 */
+0% {
+ transform: translateY(-8em);
+ animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+10%  {
+  transform: translateY(-4em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+20%  {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+30% {
+  transform: translateY(-4em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+40% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+50% {
+  transform: translateY(-4em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+60% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+70% {
+  transform: translateY(-4em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+80% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+
+90% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+
+ 100% {
+  transform: translateY(-4em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+}
+/* General styling */
+body {
+margin: 0;
+background: #e9b59f;
+font-family: HelveticaNeue, Arial, Sans-serif;
+color: #fff;
+}
+
+h1 {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+font-weight: 300;
+}
+
+h2 {
+font-size: 0.75em;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+a {
+text-decoration: none;
+color: #333;
+}
+
+.principle3 {
+width: 100%;
+height: 100vh;
+position: relative;
+}
+.text {
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 200px;
+    }
+.shape3 {
+background: black;
+border: 1em solid #fff;
+width: 2em;
+height: 2em;
+position: absolute;
+top: calc(50% - 2em);
+left: calc(50% - 2em);
+}
+  </style>
+
+    </section>
+    <section>
+
+      <p class="text">5 вариант</p>
+<article class="principle sevena6">
+    <div class="shape-container6">
+      <div class="shape6"></div>
+      <div class="boxb"></div>
+    </div>
+    <div class="text">
+    </div>
+  </article>
+  <style media="screen">
+
+.sevena6 .shape-container6 {
+animation: move-right 3.5s infinite cubic-bezier(.37,.55,.49,.67);
+position: absolute;
+left: calc(50% - 4em);
+top: calc(0% - 1em);
+}
+.sevena6 .shape6 {
+animation: kous6 3.5s infinite linear;
+border-radius: 50%;
+position: relative;
+left: auto;
+top: auto;
+}
+@keyframes move-right {
+0% {
+  transform: translateX(-10em);
+  opacity: 1;
+}
+97% {
+  opacity: 1;
+}
+100% {
+  transform: translateX(10em);
+  opacity: 0;
+}
+}
+
+@keyframes kous6 {
+  /* анимация 5 */
+0% {
+ transform: translateY(-8em);
+ animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+
+30% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+
+/* 60% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+
+90% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+} */
+
+ 100% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+}
+/* General styling */
+body {
+margin: 0;
+background: #e9b59f;
+font-family: HelveticaNeue, Arial, Sans-serif;
+color: #fff;
+}
+
+h1 {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+font-weight: 300;
+}
+
+h2 {
+font-size: 0.75em;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+a {
+text-decoration: none;
+color: #333;
+}
+
+.principle6 {
+width: 100%;
+height: 100vh;
+position: relative;
+}
+.text {
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 200px;
+    }
+.shape6 {
+background: white;
+border: 1em solid black;
+width: 2em;
+height: 2em;
+position: absolute;
+top: calc(50% - 2em);
+left: calc(50% - 2em);
+}
+  </style>
+
+    </section>
+    <section>
+
+      <p class="text">6 вариант</p>
+<article class="principle sevena2">
+    <div class="shape-container2">
+      <div class="shape2"></div>
+      <div class="boxbc"></div>
+    </div>
+    <div class="text">
+    </div>
+  </article>
+  <style media="screen">
+
+.sevena2 .shape-container2 {
+animation: move-right 3s infinite cubic-bezier(.37,.55,.49,.67);
+position: absolute;
+left: calc(50% - 4em);
+top: calc(50% - 4em);
+}
+.sevena2 .shape2 {
+animation: kous25 3s infinite linear;
+border-radius: 50%;
+position: relative;
+left: auto;
+top: auto;
+}
+@keyframes move-right {
+0% {
+  transform: translateX(-10em);
+  opacity: 1;
+}
+97% {
+  opacity: 1;
+}
+100% {
+  transform: translateX(10em);
+  opacity: 0;
+}
+}
+
+@keyframes kous25 {
+
+0% {
+ transform: translateY(-8em);
+ animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+
+30% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.19,1,.7,1);
+}
+
+60% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+
+98% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+}
+}
+
+
+/* General styling */
+body {
+margin: 0;
+background: #e9b59f;
+font-family: HelveticaNeue, Arial, Sans-serif;
+color: #fff;
+}
+
+h1 {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+font-weight: 300;
+}
+
+h2 {
+font-size: 0.75em;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+a {
+text-decoration: none;
+color: #333;
+}
+
+.principle2c {
+width: 100%;
+height: 100vh;
+position: relative;
+}
+.text {
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 200px;
+    }
+.shape2 {
+background: red;
+border: 1em solid #fff;
+width: 2em;
+height: 2em;
+position: absolute;
+top: calc(0% - 2em);
+left: calc(50% - 2em);
+}
+  </style>
+
+    </section>
+
+    <section>
+
+    <p class="text">7 вариант</p>
+  <article class="principle sevena7">
+    <div class="shape-container7">
+      <div class="shape7"></div>
+      <div class="boxbc"></div>
+    </div>
+    <div class="text">
+    </div>
+  </article>
+  <style media="screen">
+
+  .sevena7 .shape-container7 {
+  animation: move-right 4s infinite cubic-bezier(.37,.55,.49,.67);
+  position: absolute;
+  left: calc(50% - 4em);
+  top: calc(50% - 4em);
+  }
+  .sevena7 .shape7 {
+  animation: kous7 4s infinite linear;
+  border-radius: 50%;
+  position: relative;
+  left: auto;
+  top: auto;
+  }
+  @keyframes move-right {
+  0% {
+  transform: translateX(-10em);
+  opacity: 1;
+  }
+  97% {
+  opacity: 1;
+  }
+  100% {
+  transform: translateX(10em);
+  opacity: 0;
+  }
+  }
+
+  @keyframes kous7 {
+
+  0% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  20% {
+  transform: translateY(8em);
+  animation-timing-function: ease-out;
+  }
+  30% {
+  transform: translateY(-8em);
+  animation-timing-function: ease-in;
+  }
+  40% {
+  transform: translateY(8em);
+  animation-timing-function: ease-out;
+  }
+  60% {
+  transform: translateY(-8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+
+  98% {
+  transform: translateY(8em);
+  animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  }
+
+
+  /* General styling */
+  body {
+  margin: 0;
+  background: #e9b59f;
+  font-family: HelveticaNeue, Arial, Sans-serif;
+  color: #fff;
+  }
+
+  h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 300;
+  }
+
+  h2 {
+  font-size: 0.75em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  }
+
+  a {
+  text-decoration: none;
+  color: #333;
+  }
+  .text {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 200px;
+      }
+
+  .principle7 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  }
+
+  .shape7 {
+  background: brown;
+  border: 1em solid #fff;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: calc(0% - 2em);
+  left: calc(50% - 2em);
+  }
+  </style>
+
+    </section>
+  </body>
+</html>
